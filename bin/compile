@@ -210,6 +210,8 @@ source $BIN_DIR/steps/pip-install
 # Django collectstatic support.
 sub-env $BIN_DIR/steps/collectstatic
 
+# Build Hugo.
+source $BIN_DIR/steps/hugo
 
 # Create .profile script for application runtime environment variables.
 set-env PATH '$HOME/.heroku/python/bin:$PATH'
