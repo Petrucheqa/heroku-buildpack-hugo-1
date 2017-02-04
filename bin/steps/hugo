@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-HUGO_VERSION="0.15"
+HUGO_VERSION="0.18.1"
 
 # Syntax sugar.
 source $BIN_DIR/utils
