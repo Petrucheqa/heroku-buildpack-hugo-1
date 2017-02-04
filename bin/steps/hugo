@@ -8,7 +8,7 @@ source $BIN_DIR/utils
 bpwatch start hugo_install
 
 # Download the hugo package
-HUGO_FILE_NAME=hugo_${HUGO_VERSION}_linux_amd64
+HUGO_FILE_NAME=hugo_${HUGO_VERSION}_Linux-64bit
 HUGO_ARCHIVE=${HUGO_FILE_NAME}.tar.gz
 HUGO_URL=https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_ARCHIVE}
 
