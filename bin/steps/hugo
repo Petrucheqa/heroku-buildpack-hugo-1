@@ -8,8 +8,9 @@ source $BIN_DIR/utils
 bpwatch start hugo_install
 
 # Download the hugo package
-HUGO_FILE_NAME=hugo_${HUGO_VERSION}_Linux-64bit
-HUGO_ARCHIVE=${HUGO_FILE_NAME}.tar.gz
+HUGO_ARCHIVE_NAME=hugo_${HUGO_VERSION}_Linux-64bit
+HUGO_EXECUTABLE=hugo_${HUGO_VERSION}_linux_amd64
+HUGO_ARCHIVE=${HUGO_ARCHIVE_NAME}.tar.gz
 HUGO_URL=https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_ARCHIVE}
 
 # Store the hugo package in the cache_dir (persistent across builds)
@@ -20,9 +21,8 @@ fi
 
 # Extract the binary in the working directory
 echo "\n-----> Extracting Hugo ${VERSION} into ${BUILD_DIR}"
-mkdir -p $CACHE_DIR/$HUGO_FILE_NAME | indent
 tar -zxvf $CACHE_DIR/$HUGO_ARCHIVE -C $CACHE_DIR | indent
-mv $CACHE_DIR/$HUGO_FILE_NAME/$HUGO_FILE_NAME $BUILD_DIR/hugo | indent
+mv $CACHE_DIR/$HUGO_EXECUTABLE/$HUGO_EXECUTABLE $BUILD_DIR/hugo | indent
 
 # Build the site
 echo "\n-----> Building the site"
