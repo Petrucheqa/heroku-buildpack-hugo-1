@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-HUGO_VERSION="0.18.1"
+HUGO_VERSION="0.25.1"
 
 # Syntax sugar.
 source $BIN_DIR/utils
@@ -9,7 +9,6 @@ bpwatch start hugo_install
 
 # Download the hugo package
 HUGO_ARCHIVE_NAME=hugo_${HUGO_VERSION}_Linux-64bit
-HUGO_EXECUTABLE=hugo_${HUGO_VERSION}_linux_amd64
 HUGO_ARCHIVE=${HUGO_ARCHIVE_NAME}.tar.gz
 HUGO_URL=https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_ARCHIVE}
 
@@ -22,7 +21,7 @@ fi
 # Extract the binary in the working directory
 echo "\n-----> Extracting Hugo ${VERSION} into ${BUILD_DIR}"
 tar -zxvf $CACHE_DIR/$HUGO_ARCHIVE -C $CACHE_DIR | indent
-mv $CACHE_DIR/$HUGO_EXECUTABLE/$HUGO_EXECUTABLE $BUILD_DIR/hugo | indent
+mv $CACHE_DIR/hugo $BUILD_DIR/hugo | indent
 
 # Build the site
 echo "\n-----> Building the site"
