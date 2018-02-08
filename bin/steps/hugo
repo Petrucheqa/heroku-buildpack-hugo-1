@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-HUGO_VERSION="0.25.1"
+HUGO_VERSION="0.36"
 
 # Syntax sugar.
 source $BIN_DIR/utils
@@ -10,7 +10,7 @@ bpwatch start hugo_install
 # Download the hugo package
 HUGO_ARCHIVE_NAME=hugo_${HUGO_VERSION}_Linux-64bit
 HUGO_ARCHIVE=${HUGO_ARCHIVE_NAME}.tar.gz
-HUGO_URL=https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_ARCHIVE}
+HUGO_URL=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_ARCHIVE}
 
 # Store the hugo package in the cache_dir (persistent across builds)
 if ! [ -e $CACHE_DIR/$HUGO_ARCHIVE ]; then
