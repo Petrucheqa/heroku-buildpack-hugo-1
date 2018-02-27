@@ -211,7 +211,7 @@ source $BIN_DIR/steps/pip-install
 sub-env $BIN_DIR/steps/collectstatic
 
 # Build Hugo.
-source $BIN_DIR/steps/hugo
+source $BIN_DIR/steps/hugo --enableGitInfo
 
 # Create .profile script for application runtime environment variables.
 set-env PATH '$HOME/.heroku/python/bin:$PATH'
